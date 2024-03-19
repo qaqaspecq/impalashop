@@ -1,0 +1,1116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMPALA - Furnitures</title>
+  <link rel="" href="{% static 'assets/images/logo/logo.svg' %}" type="image/x-icon">
+ 
+  <link rel="stylesheet" href={% static 'assets/css/style-prefix.css' %}>
+
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body class="bg-secondary">
+<nav>
+{#    navbar section#}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">IMPALA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+          <img src="{% static 'assets/images/logo/logo.svg' %}" alt="">
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            category
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services/">Services</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contacts</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    {# end of 1 navbar #}
+    <br>
+{#  <div class="overlay" data-overlay></div>#}
+{##}
+{#  <!--#}
+{#    - MODAL#}
+{#  -->#}
+{##}
+{#  <div class="modal" data-modal>#}
+{##}
+{#    <div class="modal-close-overlay" data-modal-overlay></div>#}
+{##}
+{#    <div class="modal-content">#}
+{##}
+{#      <button class="modal-close-btn close-outline" data-modal-close>close</button>#}
+{##}
+{#      <div class="newsletter-img">#}
+{#        <img src="{% static 'assets/images/newsletter.png' %}" alt="subscribe newsletter" width="400" height="400">#}
+{#      </div>#}
+{#        #}
+{#    </div>#}
+{##}
+{#  </div>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#  <!--#}
+{#    - NOTIFICATION TOAST#}
+{#  -->#}
+{##}
+{#  <div class="notification-toast" data-toast>#}
+{##}
+{#    <button class="toast-close-btn" data-toast-close>#}
+{#      <ion-icon name="close-outline"></ion-icon>#}
+{#    </button>#}
+{##}
+{#    <div class="toast-banner">#}
+{#      <img src="{% static 'assets/images/products/jewellery-1.jpg' %}" alt="Buffet Cabinets" width="80" height="70">#}
+{#    </div>#}
+{##}
+{#    <div class="toast-detail">#}
+{##}
+{#      <p class="toast-message">#}
+{#        Someone in new just bought#}
+{#      </p>#}
+{##}
+{#      <p class="toast-title">#}
+{#        Outdoor dining sets#}
+{#      </p>#}
+{##}
+{#      <p class="toast-meta">#}
+{#        <time datetime="PT2M">1 Minutes</time> ago#}
+{#      </p>#}
+{##}
+{#    </div>#}
+{##}
+{#  </div>#}
+
+
+    
+ {# Header section #}
+{#    <header>#}
+{##}
+{#    <div class="header-top">#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <ul class="header-social-container">#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-facebook"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-twitter"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-instagram"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-linkedin"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#        </ul>#}
+{##}
+{#        <div class="header-alert-news">#}
+{#          <p>#}
+{#            <b>For More Enquiries Call </b>#}
+{#            +254738336079#}
+{#          </p>#}
+{#        </div>#}
+{##}
+{#        <div class="header-top-actions">#}
+{##}
+{#          <select name="currency">#}
+{##}
+{#            <option value="usd">KSH </option>#}
+{#            <option value="usd">USD </option>#}
+{#            <option value="eur">EUR </option>#}
+{##}
+{#          </select>#}
+{##}
+{#          <select name="language">#}
+{##}
+{#            <option value="en-US">English</option>#}
+{#            <option value="es-ES">Espa&ntilde;ol</option>#}
+{#            <option value="fr">Fran&ccedil;ais</option>#}
+{##}
+{#          </select>#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{##}
+{#    </div>#}
+{##}
+{#    <div class="header-main">#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <a href="#" class="header-logo">#}
+{#          <img src="{% static 'assets/images/logo/logo.svg' %}" width="120" height="36">#}
+{#        </a>#}
+{##}
+{#        <div class="header-search-container">#}
+{##}
+{#          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">#}
+{##}
+{#          <button class="search-btn">#}
+{#            <ion-icon name="search-outline"></ion-icon>#}
+{#          </button>#}
+{##}
+{#        </div>#}
+{##}
+{#        <div class="header-user-actions">#}
+{##}
+{#          <button class="action-btn">#}
+{#            <ion-icon name="person-outline"></ion-icon>#}
+{#          </button>#}
+{##}
+{#          <button class="action-btn">#}
+{#            <ion-icon name="heart-outline"></ion-icon>#}
+{#            <span class="count">0</span>#}
+{#          </button>#}
+{##}
+{#          <button class="action-btn">#}
+{#            <ion-icon name="bag-handle-outline"></ion-icon>#}
+{#            <span class="count">0</span>#}
+{#          </button>#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{##}
+{#    </div>#}
+{##}
+{#    <nav class="desktop-navigation-menu">#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <ul class="desktop-menu-category-list">#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Home</a>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Living Room</a>#}
+{##}
+{#            <div class="dropdown-panel">#}
+{##}
+{#              <ul class="dropdown-panel-list">#}
+{##}
+{#                <li class="menu-title">#}
+{#                  <a href="#">Living Room</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Couches</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Sofa sleeves </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Accent chairs</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Poufs</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Benches</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Coffee Tables#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Side stools #}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Side stools #}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#                #}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Magazine holders#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Console tables#}
+{#                  </a>#}
+{#                </li>#}
+{#            </ul>#}
+{#              <li class="panel-list-item">#}
+{#                <a href="#">Sofa sleeves cup and#}
+{#                  magazine holder#}
+{#                </a>#}
+{#              </li> #}
+{##}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#                #}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">#}
+{#                    <img src="{% static 'assets/images/electronics-banner-1.jpg' %}" alt="headphone collection" width="250"#}
+{#                      height="119">#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#            </div>#}
+{#        </ul>#}
+{##}
+{#              <ul class="dropdown-panel-list">#}
+{##}
+{#                <li class="menu-title">#}
+{#                  <a href="#">Dining Room</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Dining Table and Chairs – Dining Set</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Buffet Cabinets#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Dining room Mirrors</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Wine Racks and Wine Cabinets</a>#}
+{#                </li>#}
+{##}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">#}
+{#                    <img src="{% static 'assets/images/mens-banner.jpg' %}" alt="men's fashion" width="250" height="119">#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#              </ul>#}
+{##}
+{#              <ul class="dropdown-panel-list">#}
+{##}
+{#                <li class="menu-title">#}
+{#                  <a href="#">Bedroom</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Beds</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Kids bedroom</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Chest of Drawers</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Wardrobes </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Kids Play Station </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">#}
+{#                    <img src="{% static 'assets/images/womens-banner.jpg' %}" alt="women's fashion" width="250" height="119">#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#              </ul>#}
+{##}
+{#              <ul class="dropdown-panel-list">#}
+{##}
+{#                <li class="menu-title">#}
+{#                  <a href="#">Kitchen</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Pantry</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Storage Shelf</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Gas Cylinder Storage#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Island Table</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">Stepping Stool</a>#}
+{#                </li>#}
+{##}
+{#                <li class="panel-list-item">#}
+{#                  <a href="#">#}
+{#                    <img src="{% static 'assets/images/electronics-banner-2.jpg' %}" alt="mouse collection" width="250" height="119">#}
+{#                  </a>#}
+{#                </li>#}
+{##}
+{#              </ul>#}
+{##}
+{#            </div>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Dining Room </a>#}
+{##}
+{#            <ul class="dropdown-list">#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Dining Table and Chairs – Dining Set</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Buffet Cabinets#}
+{#                </a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Dining room Mirrors#}
+{#                </a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Wine Racks and Wine Cabinets</a>#}
+{#              </li>#}
+{##}
+{#            </ul>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Bedroom</a>#}
+{##}
+{#            <ul class="dropdown-list">#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Beds</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Kids bedroom#}
+{#                </a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Chest of Drawers</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Pickler </a>#}
+{#              </li>#}
+{##}
+{#              #}
+{#          #}
+{#            </ul>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Adult Bedroom</a>#}
+{##}
+{#            <ul class="dropdown-list">#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Beds#}
+{#                </a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Chest of Drawers</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Wardrobes</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Storage Bench</a>#}
+{#              </li>#}
+{##}
+{#            </ul>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">KITCHEN</a>#}
+{##}
+{#            <ul class="dropdown-list">#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Pantry</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Storage Shelf</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Gas Cylinder Storage</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Island Table</a>#}
+{#              </li>#}
+{##}
+{#              <li class="dropdown-item">#}
+{#                <a href="#">Stepping Stool</a>#}
+{#              </li>#}
+{##}
+{#            </ul>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Blog</a>#}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <a href="#" class="menu-title">Hot Offers</a>#}
+{#          </li>#}
+{##}
+{#        </ul>#}
+{##}
+{#      </div>#}
+{##}
+{#    </nav>#}
+{##}
+{#    <div class="mobile-bottom-navigation">#}
+{##}
+{#      <button class="action-btn" data-mobile-menu-open-btn>#}
+{#        <ion-icon name="menu-outline"></ion-icon>#}
+{#      </button>#}
+{##}
+{#      <button class="action-btn">#}
+{#        <ion-icon name="bag-handle-outline"></ion-icon>#}
+{##}
+{#        <span class="count">0</span>#}
+{#      </button>#}
+{##}
+{#      <button class="action-btn">#}
+{#        <ion-icon name="home-outline"></ion-icon>#}
+{#      </button>#}
+{##}
+{#      <button class="action-btn">#}
+{#        <ion-icon name="heart-outline"></ion-icon>#}
+{##}
+{#        <span class="count">0</span>#}
+{#      </button>#}
+{##}
+{#      <button class="action-btn" data-mobile-menu-open-btn>#}
+{#        <ion-icon name="grid-outline"></ion-icon>#}
+{#      </button>#}
+{##}
+{#    </div>#}
+{##}
+{#    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>#}
+{##}
+{#      <div class="menu-top">#}
+{#        <h2 class="menu-title">Menu</h2>#}
+{##}
+{#        <button class="menu-close-btn" data-mobile-menu-close-btn>#}
+{#          <ion-icon name="close-outline"></ion-icon>#}
+{#        </button>#}
+{#      </div>#}
+{##}
+{#      <ul class="mobile-menu-category-list">#}
+{##}
+{#        <li class="menu-category">#}
+{#          <a href="#" class="menu-title">Home</a>#}
+{#        </li>#}
+{##}
+{#        <li class="menu-category">#}
+{##}
+{#          <button class="accordion-menu" data-accordion-btn>#}
+{#            <p class="menu-title">Living Room</p>#}
+{##}
+{#            <div>#}
+{#              <ion-icon name="add-outline" class="add-icon"></ion-icon>#}
+{#              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>#}
+{#            </div>#}
+{#          </button>#}
+{##}
+{#          <ul class="submenu-category-list" data-accordion>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Couches</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Accent chairs#}
+{#              </a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Poufs</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Coffee Tables#}
+{#              </a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title"></a>#}
+{#            </li>#}
+{##}
+{#          </ul>#}
+{##}
+{#        </li>#}
+{##}
+{#        <li class="menu-category">#}
+{##}
+{#          <button class="accordion-menu" data-accordion-btn>#}
+{#            <p class="menu-title">Dining Room#}
+{#            </p>#}
+{##}
+{#            <div>#}
+{#              <ion-icon name="add-outline" class="add-icon"></ion-icon>#}
+{#              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>#}
+{#            </div>#}
+{#          </button>#}
+{##}
+{#          <ul class="submenu-category-list" data-accordion>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Dining Table & Chairs – Dining Set</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Buffet Cabinets</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Dining room Mirrors</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Wine Racks and Wine Cabinets</a>#}
+{#            </li>#}
+{##}
+{#          </ul>#}
+{##}
+{#        </li>#}
+{##}
+{#        <li class="menu-category">#}
+{##}
+{#          <button class="accordion-menu" data-accordion-btn>#}
+{#            <p class="menu-title">Adult Bedroom</p>#}
+{##}
+{#            <div>#}
+{#              <ion-icon name="add-outline" class="add-icon"></ion-icon>#}
+{#              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>#}
+{#            </div>#}
+{#          </button>#}
+{##}
+{#          <ul class="submenu-category-list" data-accordion>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Beds</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Chest of Drawers</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Wardrobes</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Storage Bench</a>#}
+{#            </li>#}
+{##}
+{#          </ul>#}
+{##}
+{#        </li>#}
+{##}
+{#        <li class="menu-category">#}
+{##}
+{#          <button class="accordion-menu" data-accordion-btn>#}
+{#            <p class="menu-title">Kitchen</p>#}
+{##}
+{#            <div>#}
+{#              <ion-icon name="add-outline" class="add-icon"></ion-icon>#}
+{#              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>#}
+{#            </div>#}
+{#          </button>#}
+{##}
+{#          <ul class="submenu-category-list" data-accordion>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Pantry</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Storage Shelf</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Gas Cylinder Storage</a>#}
+{#            </li>#}
+{##}
+{#            <li class="submenu-category">#}
+{#              <a href="#" class="submenu-title">Stepping Stool</a>#}
+{#            </li>#}
+{##}
+{#          </ul>#}
+{##}
+{#        </li>#}
+{##}
+{#        <li class="menu-category">#}
+{#          <a href="#" class="menu-title">Blog</a>#}
+{#        </li>#}
+{##}
+{#        <li class="menu-category">#}
+{#          <a href="#" class="menu-title">Hot Offers</a>#}
+{#        </li>#}
+{##}
+{#      </ul>#}
+{##}
+{#      <div class="menu-bottom">#}
+{##}
+{#        <ul class="menu-category-list">#}
+{##}
+{#          <li class="menu-category">#}
+{##}
+{#            <button class="accordion-menu" data-accordion-btn>#}
+{#              <p class="menu-title">Language</p>#}
+{##}
+{#              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>#}
+{#            </button>#}
+{##}
+{#            <ul class="submenu-category-list" data-accordion>#}
+{##}
+{#              <li class="submenu-category">#}
+{#                <a href="#" class="submenu-title">English</a>#}
+{#              </li>#}
+{##}
+{#              <li class="submenu-category">#}
+{#                <a href="#" class="submenu-title">Espa&ntilde;ol</a>#}
+{#              </li>#}
+{##}
+{#              <li class="submenu-category">#}
+{#                <a href="#" class="submenu-title">Fren&ccedil;h</a>#}
+{#              </li>#}
+{##}
+{#            </ul>#}
+{##}
+{#          </li>#}
+{##}
+{#          <li class="menu-category">#}
+{#            <button class="accordion-menu" data-accordion-btn>#}
+{#              <p class="menu-title">Currency</p>#}
+{#              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>#}
+{#            </button>#}
+{##}
+{#            <ul class="submenu-category-list" data-accordion>#}
+{#              <li class="submenu-category">#}
+{#                <a href="#" class="submenu-title">KES </a>#}
+{#              </li>#}
+{##}
+{#              <li class="submenu-category">#}
+{#                <a href="#" class="submenu-title">USD &euro;</a>#}
+{#              </li>#}
+{#            </ul>#}
+{#          </li>#}
+{##}
+{#        </ul>#}
+{##}
+{#        <ul class="menu-social-container">#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-facebook"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-twitter"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-instagram"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#          <li>#}
+{#            <a href="#" class="social-link">#}
+{#              <ion-icon name="logo-linkedin"></ion-icon>#}
+{#            </a>#}
+{#          </li>#}
+{##}
+{#        </ul>#}
+{##}
+{#      </div>#}
+{##}
+{#    </nav>#}
+{##}
+{#  </header>#}
+</nav>
+
+{% block body %}
+
+{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+
+      <div class="container">
+
+        <h2 class="footer-category-title">Furniture Category</h2>
+
+        <div class="footer-category-box">
+
+          <h3 class="category-box-title"> </h3>
+
+          <a href="#" class="footer-category-link">Living Room</a>
+          <a href="#" class="footer-category-link">Dining Room</a>
+          <a href="#" class="footer-category-link">BedRoom</a>
+          <a href="#" class="footer-category-link">Kitchen</a>
+          <a href="#" class="footer-category-link">Outdoor</a>
+          <a href="#" class="footer-category-link">Office Furniture</a>
+          <a href="#" class="footer-category-link">Shelves</a>
+
+        </div>  
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Living Room :</h3>
+        
+          <a href="#" class="footer-category-link">Couches</a>
+          <a href="#" class="footer-category-link">Accent Chairs</a>
+          <a href="#" class="footer-category-link">Poufs</a>
+          <a href="#" class="footer-category-link">Benches</a>
+          <a href="#" class="footer-category-link">Coffee Table</a>
+          <a href="#" class="footer-category-link">Side Tools  </a>
+          <a href="#" class="footer-category-link">Console tables</a>
+          <a href="#" class="footer-category-link">Magazine holders</a>
+          <a href="#" class="footer-category-link">Sofa sleeves cup and
+            magazine holder</a>
+            <div class="footer-category-box">
+          <h3 class="category-box-title">Dining Room :</h3>
+        
+          <a href="#" class="footer-category-link">Dining Table and Chairs – Dining Set</a>
+          <a href="#" class="footer-category-link">Buffet Cabinets</a>
+          <a href="#" class="footer-category-link">Dining room Mirrors</a>
+          <a href="#" class="footer-category-link">Wine Racks and Wine Cabinets</a>
+         
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Bedroom :</h3>
+        
+          <a href="#" class="footer-category-link">Beds</a>
+          <a href="#" class="footer-category-link">Kids bedroom</a>
+          <a href="#" class="footer-category-link">Chest of Drawers</a>
+          <a href="#" class="footer-category-link">Pickler</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">Wardrobes</a>
+        
+
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Adult Bedroom</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Beds</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Chest of Drawers
+            </a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Wardrobes
+            </a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Storage Bench</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Kitchen</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Pantry</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              Nairobi, Kenya
+              Mombasa Road
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">+254738336079</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:example@gmail.com" class="footer-nav-link">Impala@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Impala</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
